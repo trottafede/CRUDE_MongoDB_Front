@@ -6,7 +6,7 @@ import UpdateUser from "./Update_User";
 function Home() {
   // Want to use async/await? Add the `async` keyword to your outer function/method.
   const [users, setUsers] = useState([]);
-  const url = "https://crude-mongo-db-back.vercel.app/api/users";
+  const url = process.env.REACT_APP_API_URL;
 
   const fetchData = async () => {
     try {
